@@ -1,0 +1,17 @@
+{
+    "name": "sophonie/soway",
+    "description": "Soway request router php",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Soway\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sophonie Bouye",
+            "email": "sophoniebouye@gmail.com"
+        }
+    ],
+    "require": {}
+}
