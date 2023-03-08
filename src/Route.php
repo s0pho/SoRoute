@@ -1,6 +1,6 @@
 <?php
 
-namespace Soway;
+namespace Sophoway;
 
 /**
  * Route class
