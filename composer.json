@@ -1,10 +1,10 @@
 {
-    "name": "sophonie/soway",
+    "name": "sophonie/sophoway",
     "description": "Soway request router php",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Soway\\": "src/"
+            "Sophoway\\": "src/"
         }
     },
     "authors": [
