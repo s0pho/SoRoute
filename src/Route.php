@@ -1,11 +1,11 @@
 <?php
 
-namespace PhazRoute;
+namespace PhazRouter;
 
 /**
  * Route class
  */
-class Route{
+class Route {
     static private $routes = [];
     /**
      * get handle for get method
@@ -16,7 +16,6 @@ class Route{
      */
     static public function get(string $uri,callable | array $handler, string $name = "" ) {
         // TODO make some verification for validate uri
-
         array_push(self::$routes, array('uri' => $uri, 'handler' => $handler, 'method' => 'GET'));
     }
 
