@@ -1,13 +1,12 @@
 <?php
 
-namespace Sophoway;
+namespace PhazRoute;
 
 /**
  * Route class
  */
 class Route{
     static private $routes = [];
-    static private $query_params;
     /**
      * get handle for get method
      * Params
