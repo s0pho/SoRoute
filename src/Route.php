@@ -1,6 +1,6 @@
 <?php
 
-namespace PhazRouter;
+namespace Phaz\Routing;
 
 /**
  * Route class

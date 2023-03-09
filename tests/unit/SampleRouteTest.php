@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-use PhazRouter\Route;
+use Phaz\Routing\Route;
 use PHPUnit\Framework\TestCase;
 
 final class SampleRouteTest extends TestCase {

@@ -1,10 +1,10 @@
 {
-    "name": "eliphaz/phazrouter",
+    "name": "phaz/routing",
     "description": "PhazRouter request router php",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "PhazRouter\\": "src/"
+            "Phaz\\Routing\\": "src/"
         }
     },
     "authors": [
