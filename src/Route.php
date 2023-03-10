@@ -1,12 +1,14 @@
 <?php
 
-namespace Phaz\Routing;
+namespace Phaz;
 
 /**
  * Route class
  */
 class Route {
-    static private $routes = [];
+    static public $routes = [];
+
+    public function __construct() {}
     /**
      * get handle for get method
      * Params
@@ -16,13 +18,20 @@ class Route {
      */
     static public function get(string $uri,callable | array $handler, string $name = "" ) {
         // TODO make some verification for validate uri
-        array_push(self::$routes, array('uri' => $uri, 'handler' => $handler, 'method' => 'GET'));
+        // $callback = func_get_args()[1];
+        if (gettype($handler) == 'object'){
+            array_push(self::$routes, array('uri' => $uri, 'handler' => $handler(), 'method' => 'GET'));
+        }
+        else {
+            array_push(self::$routes, array('uri' => $uri, 'handler' => $handler, 'method' => 'GET'));
+        }
     }
 
     static public function execute() {
         $result_search = array_search($_SERVER['REQUEST_URI'], array_column(self::$routes, 'uri'));
+        
         if (is_callable(self::$routes[$result_search]['handler'])) {
-            return self::$routes[$result_search]['handler']();
+            return call_user_func(self::$routes[$result_search]['handler']);
         } else if (gettype(self::$routes[$result_search]['handler']) === 'array') {
             
             $uri = self::$routes[$result_search]['uri'];
