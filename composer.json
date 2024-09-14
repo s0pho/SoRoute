@@ -1,16 +1,16 @@
 {
-    "name": "phaz/routing",
+    "name": "sophonie/route",
     "description": "PhazRouter request router php",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Phaz\\Routing\\": "src/"
+            "So\\Route\\": "src/"
         }
     },
     "authors": [
         {
-            "name": "Eliphaz Bouye",
-            "email": "eliphazbouye@gmail.com"
+            "name": "Sophonie Bouye",
+            "email": "sophoniebouye@gmail.com"
         }
     ],
     "require-dev": {
